@@ -1,7 +1,31 @@
 .site-header {
   background: black;
+  padding: 1rem 0;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
   .logo {
-    color: white;
+    text-transform: uppercase;
+
+    a:hover {
+      color: hotpink;
+    }
+  }
+
+  .site-header--nav {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        background: rgb(35, 35, 35);
+      }
+    }
   }
 }
