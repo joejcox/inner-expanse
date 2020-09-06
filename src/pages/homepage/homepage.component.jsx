@@ -2,7 +2,7 @@ import React from "react";
 import "./homepage.styles.scss";
 import CtaContainer from "../../components/cta-container/cta-container.component";
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <main className="homepage">
       <div className="container">
@@ -12,4 +12,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
