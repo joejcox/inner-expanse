@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400&family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.button {
+  border: none;
+  background: hotpink;
+  color: white;
+  border-radius: 0;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: black;
+  }
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.page-title {
+  font-family: "Londrina Solid", cursive;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background: hotpink;
+  }
+}

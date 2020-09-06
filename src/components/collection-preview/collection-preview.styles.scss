@@ -1,0 +1,27 @@
+.collection-preview {
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  .collection-title {
+    display: inline-block;
+    padding: 0.25rem;
+    background: black;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .collection-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: space-between;
+  }
+
+  header,
+  footer {
+    padding: 0 1rem;
+  }
+
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}

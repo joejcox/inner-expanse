@@ -1,0 +1,25 @@
+.collection-item {
+  flex: 1 1 auto;
+  margin: 0 1rem;
+  width: 300px;
+
+  .collection-item--image {
+    width: 100%;
+    height: 400px;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .collection-item--footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .collection-item--title {
+      font-weight: 600;
+    }
+  }
+}

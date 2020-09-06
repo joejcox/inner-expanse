@@ -1,5 +1,5 @@
 import React from "react";
-import "./cta-container.styles.css";
+import "./cta-container.styles.scss";
 import Cta from "../cta/cta.component.jsx";
 
 class CtaContainer extends React.Component {

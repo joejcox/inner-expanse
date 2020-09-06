@@ -2,6 +2,12 @@
   background: black;
   padding: 1rem 0;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   a {
     text-decoration: none;
     color: white;
@@ -9,6 +15,9 @@
 
   .logo {
     text-transform: uppercase;
+    font-family: "Londrina Solid", cursive;
+    letter-spacing: 4px;
+    font-weight: 400;
 
     a:hover {
       color: hotpink;
