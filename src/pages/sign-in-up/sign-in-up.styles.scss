@@ -1,0 +1,37 @@
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .form-group--area {
+        flex: 1 1 auto;
+
+        &:first-child {
+            padding-right: .5rem;
+        }
+
+        &:last-child {
+            padding-left: .5rem;
+        }
+
+        .area-container {
+            background: white;
+            padding: 2rem 5rem;
+            box-shadow: 0 0 8px rgba(156, 156, 156, 0.1);
+        }
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    .form-group .form-group--area {
+        &:first-child {
+            padding-right: .5rem;
+            padding-bottom: .25rem;
+        }
+
+        &:last-child {
+            padding-left: .5rem;
+            padding-top: .25rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@mixin labelShrink() {
+
+    color: hotpink;
+    transform: translate(0);
+    font-size: .8rem;
+}
+
+.form-field {
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+
+    .form-input-label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.3s ease-in-out;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: rgba(59, 59, 59, 0.24);
+        transform: translate(10px, 40px);
+        pointer-events: none;
+
+        &.shrink {
+            @include labelShrink();
+        }
+    }
+
+    .input {
+        transition: 0.2s ease;
+        width: 100%;
+        padding: 1rem .5rem;
+        border: none;
+        border-bottom: 1px solid rgb(255, 105, 180);
+
+        &.not-empty {
+            border-bottom: none;
+            background: rgba(255, 105, 180, 0.116);
+        }
+
+        &:focus {
+            outline: none;
+            background: rgba(255, 105, 180, 0.116);
+            border-bottom: none;
+
+            ~.form-input-label {
+                @include labelShrink();
+            }
+        }
+    }
+}

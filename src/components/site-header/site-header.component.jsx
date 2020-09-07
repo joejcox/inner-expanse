@@ -12,6 +12,7 @@ const SiteHeader = ({ history }) => {
         <nav className="site-header--nav">
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
+          <Link to="/sign-in">Sign In</Link>
         </nav>
       </div>
     </header>
