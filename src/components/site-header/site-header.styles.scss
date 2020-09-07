@@ -27,13 +27,28 @@
   .site-header--nav {
     display: flex;
     justify-content: flex-end;
+
     a {
       padding: 1rem;
       color: white;
       text-decoration: none;
+      transition: 0.2s ease;
 
       &:hover {
         background: rgb(35, 35, 35);
+      }
+
+      &.sign-up-button,
+      &.sign-out-button {
+        background: black;
+        border: 1px solid rgb(255, 193, 224);
+        color: rgb(255, 193, 224);
+        margin-left: .5rem;
+
+        &:hover {
+          background: hotpink;
+          color: white;
+        }
       }
     }
   }

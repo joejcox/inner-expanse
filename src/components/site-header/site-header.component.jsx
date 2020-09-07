@@ -2,7 +2,7 @@ import React from "react";
 import "./site-header.styles.scss";
 import { Link, withRouter } from "react-router-dom";
 
-const SiteHeader = ({ history }) => {
+const SiteHeader = ({ signout, user }) => {
   return (
     <header className="site-header">
       <div className="container">
@@ -12,7 +12,15 @@ const SiteHeader = ({ history }) => {
         <nav className="site-header--nav">
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/sign-in">Sign In</Link>
+          {user !== null ? (
+            <Link to="/" className="button sign-out-button" onClick={signout}>
+              Sign Out
+            </Link>
+          ) : (
+            <Link to="/sign-in" className="button sign-up-button">
+              Sign Up
+            </Link>
+          )}
         </nav>
       </div>
     </header>
