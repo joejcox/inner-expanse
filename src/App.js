@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import SignInAndUp from "./pages/sign-in-up/sign-in-up.component";
-import { auth } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import "./App.scss";
 
@@ -24,11 +24,21 @@ class App extends Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({
-        currentUser: user,
-      });
-      console.log(user);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot((snapShot) => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      } else {
+        this.setState({ currentUser: userAuth });
+      }
     });
   }
 
@@ -36,7 +46,7 @@ class App extends Component {
     this.unsubscribeFromAuth();
   }
 
-  signOut = () => {
+  userSignOut = () => {
     auth.signOut();
     this.setState({
       currentUser: null,
@@ -47,7 +57,7 @@ class App extends Component {
     return (
       <div className="App">
         <SiteHeader
-          signout={() => this.signOut()}
+          signout={() => this.userSignOut()}
           user={this.state.currentUser}
         />
         <Switch>

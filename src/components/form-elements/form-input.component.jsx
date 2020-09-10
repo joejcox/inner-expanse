@@ -12,6 +12,7 @@ const FormInput = ({ handleChange, label, ...otherProps }) => {
         value={otherProps.value}
         onChange={handleChange}
         required
+        autoComplete="on"
       />
       {label ? (
         <label

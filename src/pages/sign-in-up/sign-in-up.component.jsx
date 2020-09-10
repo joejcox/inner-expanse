@@ -1,6 +1,7 @@
 import React from "react";
 import "./sign-in-up.styles.scss";
 import SignIn from "../../components/sign-in/sign-in.component";
+import SignUp from "../../components/sign-up/sign-up.component";
 
 const SignInAndUp = () => {
   return (
@@ -9,7 +10,7 @@ const SignInAndUp = () => {
         <h1 className="page-title">Sign In or Register</h1>
         <div className="form-group">
           <SignIn />
-          <SignIn />
+          <SignUp />
         </div>
       </div>
     </main>
