@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 .5rem;
   }
 
   a {
@@ -24,15 +25,33 @@
     }
   }
 
+  .cart {
+    color: white;
+    margin-left: 1rem;
+    background: rgb(32, 32, 32);
+    padding: 1rem;
+    cursor: pointer;
+
+    .cart__item_count {
+      margin-left: .5rem;
+    }
+
+    &:hover {
+      background: hotpink;
+    }
+  }
+
   .site-header--nav {
     display: flex;
     justify-content: flex-end;
+    margin-left: auto;
 
     a {
       padding: 1rem;
       color: white;
       text-decoration: none;
       transition: 0.2s ease;
+      margin-left: .5rem;
 
       &:hover {
         background: rgb(35, 35, 35);

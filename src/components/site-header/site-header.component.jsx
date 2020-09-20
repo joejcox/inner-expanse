@@ -24,6 +24,10 @@ const SiteHeader = ({ currentUser }) => {
             </Link>
           )}
         </nav>
+        <div className="cart">
+          <i className="fas fa-shopping-cart"></i>
+          <span className="cart__item_count">0</span>
+        </div>
       </div>
     </header>
   );
