@@ -15,15 +15,12 @@ const SiteHeader = ({ currentUser }) => {
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
           {currentUser ? (
-            <Link
-              to="/"
-              className="button sign-out-button"
-              onClick={() => auth.signOut()}>
+            <Link to="/sign-in" onClick={() => auth.signOut()}>
               Sign Out
             </Link>
           ) : (
-            <Link to="/sign-in" className="button sign-up-button">
-              Sign In
+            <Link to="/sign-in" className="button">
+              Sign Up
             </Link>
           )}
         </nav>
