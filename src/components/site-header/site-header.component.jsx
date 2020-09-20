@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux"; //Connect is a HCO which lets us access things related to redux
 import { auth } from "../../firebase/firebase.utils";
 import "./site-header.styles.scss";
+import CartIcon from "../cart-icon/cart-icon.component";
 
 const SiteHeader = ({ currentUser }) => {
   return (
@@ -24,10 +25,7 @@ const SiteHeader = ({ currentUser }) => {
             </Link>
           )}
         </nav>
-        <div className="cart">
-          <i className="fas fa-shopping-cart"></i>
-          <span className="cart__item_count">0</span>
-        </div>
+        <CartIcon />
       </div>
     </header>
   );
