@@ -68,7 +68,10 @@ export default class SignIn extends Component {
             <FormButton type="submit" name="submit">
               Sign In
             </FormButton>
-            <FormButton classes="google-button" onClick={signInWithGoogle}>
+            <FormButton
+              classes="google-button"
+              type="button"
+              onClick={signInWithGoogle}>
               <i className="fab fa-google"></i> Sign in with Google
             </FormButton>
           </form>

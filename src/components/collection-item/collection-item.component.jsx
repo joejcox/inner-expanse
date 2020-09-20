@@ -1,9 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import "./collection-item.styles.scss";
 
-const CollectionItem = ({ name, imageUrl, price }) => {
+const CollectionItem = ({ name, imageUrl, price, history }) => {
   return (
-    <article className="collection-item">
+    <article
+      className="collection-item"
+      onClick={() => history.push(`/shop/products/${name}`)}>
       <div className="collection-item--image">
         <img src={imageUrl} alt={name} />
       </div>
@@ -15,4 +18,4 @@ const CollectionItem = ({ name, imageUrl, price }) => {
   );
 };
 
-export default CollectionItem;
+export default withRouter(CollectionItem);
