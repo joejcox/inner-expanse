@@ -65,11 +65,11 @@ export default class SignIn extends Component {
               value={this.state.password}
             />
 
-            <FormButton type="submit" name="submit">
+            <FormButton type="submit" name="submit" classes="margins">
               Sign In
             </FormButton>
             <FormButton
-              classes="google-button"
+              classes="google-button margins"
               type="button"
               onClick={signInWithGoogle}>
               <i className="fab fa-google"></i> Sign in with Google

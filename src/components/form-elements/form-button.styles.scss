@@ -1,13 +1,47 @@
-.button.form-submit-button {
-    transition: 0.2s ease;
-    margin-top: 2rem;
-    margin-right: 1rem;
+.button {
+    border: none;
+    background: hotpink;
+    color: white;
+    border-radius: 0;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    outline: none;
 
-    &.google-button {
-        background: rgb(8, 137, 243);
+    &:hover {
+        background: darken(hotpink, 30%);
+    }
 
-        &:hover {
-            background: darken(rgb(8, 137, 243), 20%);
+    &.form-submit-button {
+        transition: 0.2s ease;
+
+        &.margins {
+            margin-top: 2rem;
+            margin-right: 1rem;
+        }
+
+        &.google-button {
+            background: rgb(8, 137, 243);
+
+            &:hover {
+                background: darken(rgb(8, 137, 243), 20%);
+            }
+        }
+
+        &.inverted {
+            padding: 1.5rem;
+            border: 1px solid black;
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+
+            &.thin {
+                padding: .75rem 1.5rem;
+            }
+
+            &:hover {
+                background: black;
+                color: white;
+            }
         }
     }
+
 }

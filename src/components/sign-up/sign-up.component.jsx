@@ -99,7 +99,7 @@ class SignUp extends Component {
               value={confirmPassword}
             />
 
-            <FormButton type="submit" name="signUpSubmit">
+            <FormButton type="submit" name="signUpSubmit" classes="margins">
               Sign Up
             </FormButton>
           </form>
