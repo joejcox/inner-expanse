@@ -1,0 +1,16 @@
+.cart {
+    position: relative;
+    color: white;
+    margin-left: 1rem;
+    background: rgb(32, 32, 32);
+    padding: 1rem;
+    cursor: pointer;
+
+    .cart__item_count {
+        margin-left: .5rem;
+    }
+
+    &:hover {
+        background: hotpink;
+    }
+}

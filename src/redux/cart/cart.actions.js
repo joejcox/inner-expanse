@@ -1,6 +1,5 @@
-// import { UserActionTypes } from "./user.types";
+import { CartActionTypes } from "./cart.types";
 
-// export const setCurrentUser = (user) => ({
-//   type: UserActionTypes.SET_CURRENT_USER,
-//   payload: user,
-// });
+export const setCartDisplay = () => ({
+  type: CartActionTypes.SET_CART_DISPLAY,
+});
