@@ -1,6 +1,9 @@
 .site-header {
   background: black;
   padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 
   .container {
     display: flex;

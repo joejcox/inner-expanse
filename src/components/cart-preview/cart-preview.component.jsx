@@ -10,7 +10,7 @@ const CartPreview = ({ cartItems }) => {
     <div className="cart_preview">
       <div className="cart_preview__items">
         {cartItems.map((item) => {
-          return <CartItem id={item.id} item={item} />;
+          return <CartItem key={item.id} item={item} />;
         })}
       </div>
       <FormButton inverted>GO TO CHECKOUT</FormButton>
@@ -18,8 +18,8 @@ const CartPreview = ({ cartItems }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  cartItems: state.cart.cartItems,
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  cartItems: cartItems,
 });
 
 export default connect(mapStateToProps)(CartPreview);

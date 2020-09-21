@@ -1,5 +1,4 @@
 import React from "react";
-// import { connect } from "react-redux";
 
 import "./cart-item.styles.scss";
 
@@ -11,7 +10,7 @@ const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
       </div>
       <div className="cart_preview__item_info">
         <h4>{name}</h4>
-        <span>£{price}</span>
+        <span>£{price * quantity}</span>
         <p>Quantity: {quantity}</p>
       </div>
     </div>
